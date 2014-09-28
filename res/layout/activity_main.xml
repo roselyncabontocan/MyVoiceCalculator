@@ -266,38 +266,7 @@
         android:textColor="#ffffff"
         android:textStyle="bold" />
 
-    <EditText
-        android:id="@+id/editnum3"
-        android:layout_width="50dip"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/btnequal"
-        android:layout_below="@+id/btnequal"
-        android:layout_marginTop="15dp"
-        android:textColor="#ffffff"
-         android:visibility="gone"
-        android:ems="10" />
 
-    <EditText
-        android:id="@+id/editnum2"
-        android:layout_width="50dip"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_alignTop="@+id/editnum4"
-        android:layout_toRightOf="@+id/btn00"
-        android:ems="10"
-        android:visibility="gone"
-        android:textColor="#ffffff" />
-
-    <EditText
-        android:id="@+id/editnum4"
-        android:layout_width="50dip"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/editnum3"
-        android:layout_alignParentBottom="true"
-        android:layout_alignRight="@+id/btndot"
-        android:ems="10"
-         android:visibility="gone"
-        android:textColor="#ffffff" />
 
     <EditText
         android:id="@+id/editnum1"
@@ -309,7 +278,7 @@
         android:ems="10"
         android:gravity="right"
         android:textColor="#ffffff"
-        android:textSize="25dp" >
+        android:textSize="20dp" >
 
         <requestFocus />
     </EditText>
@@ -323,6 +292,6 @@
         android:ems="10"
         android:gravity="right"
         android:textColor="#ffffff"
-        android:textSize="25dp" />
+        android:textSize="20dp" />
 
 </RelativeLayout>

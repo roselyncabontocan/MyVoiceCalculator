@@ -2,40 +2,20 @@ package edu.ucuccs.myvoice_calculator;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
 public class MainActivity extends Activity {
-
-	Float num2;
-	Float num4;
-	// Double div;
-	String operation;
-
-	Float ans;
-	Button btn1;
-	Button btn2;
-	Button btn3;
-	Button btn4;
-	Button btn5;
-	Button btn6;
-	Button btn7;
-	Button btn8;
-	Button btn9;
-	Button btn0;
-	Button btn00;
-	Button btnc;
-	Button btnminus;
-	Button btnplus;
-	Button btnmulti;
-	Button btndivide;
-	Button btndot;
-	Button btnequal;
+	Double num1, num2,num3;
+	Boolean add, minus, mul, div;
+	Button btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9, btn0, btn00,
+			btnc, btnminus, btnplus, btnmulti, btndivide, btndot, btnequal;
 	Button btnon;
 	Button btnoff;
 	EditText editnum1,editnum5;
-	EditText editnum2, editnum3, editnum4;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -62,153 +42,140 @@ public class MainActivity extends Activity {
 		btnon = (Button) findViewById(R.id.btnon);
 		btnoff = (Button) findViewById(R.id.btnoff);
 		editnum1 = (EditText) findViewById(R.id.editnum1);
-		editnum2 = (EditText) findViewById(R.id.editnum2);
-		editnum3 = (EditText) findViewById(R.id.editnum3);
-		editnum4 = (EditText) findViewById(R.id.editnum4);
 		editnum5 = (EditText) findViewById(R.id.editnum5);
 
 	}
 
 	public void one(View v) {
 		editnum1.setText(editnum1.getText() + "1");
-		editnum2.setText(editnum1.getText());
+		
 	}
 
 	public void two(View v) {
 		editnum1.setText(editnum1.getText() + "2");
-		editnum2.setText(editnum1.getText());
+		
 	}
 
 	public void three(View v) {
 		editnum1.setText(editnum1.getText() + "3");
-		editnum2.setText(editnum1.getText());
+		
 	}
 
 	public void four(View v) {
 		editnum1.setText(editnum1.getText() + "4");
-		editnum2.setText(editnum1.getText());
+		
 	}
 
 	public void five(View v) {
 		editnum1.setText(editnum1.getText() + "5");
-		editnum2.setText(editnum1.getText());
+		
 	}
 
 	public void six(View v) {
 		editnum1.setText(editnum1.getText() + "6");
-		editnum2.setText(editnum1.getText());
+		
 	}
 
 	public void seven(View v) {
 		editnum1.setText(editnum1.getText() + "7");
-		editnum2.setText(editnum1.getText());
+		
 	}
 
 	public void eight(View v) {
 		editnum1.setText(editnum1.getText() + "8");
-		editnum2.setText(editnum1.getText());
+		
 	}
 
 	public void nine(View v) {
 		editnum1.setText(editnum1.getText() + "9");
-		editnum2.setText(editnum1.getText());
+		
 	}
 
 	public void zero(View v) {
 		editnum1.setText(editnum1.getText() + "0");
-		editnum2.setText(editnum1.getText());
+		
 	}
 
 	public void zero2(View v) {
 		editnum1.setText(editnum1.getText() + "00");
-		editnum2.setText(editnum1.getText());
+		
 	}
 
 	public void dot(View v) {
 		editnum1.setText("" + ".");
-		editnum2.setText("" + ".");
+		
 	}
 
 	public void clear(View v) {
-		editnum2.setText("");
+		
 		editnum1.setText("");
-		editnum3.setText("");
-		editnum4.setText("");
+		
 	}
 
 	// calculation//
 	public void plus(View v) {
 
-		editnum3.setText("+");
-		editnum2.setText(editnum1.getText());
-		editnum1.setText("");
-		editnum4.setText(editnum2.getText().toString());
-		editnum5.setText(editnum4.getText().toString() + "+");
-		editnum2.setText("");
+		
+		num1=Double.parseDouble(editnum1.getText() +"");
+		editnum5.setText(editnum1.getText().toString() + "" + "+");
+		add=true;
+		editnum1.setText(null);
+
 
 	}
 
 	public void minus(View v) {
-
-		editnum3.setText("-");
-		editnum2.setText(editnum1.getText());
-		editnum1.setText("");
-		editnum4.setText(editnum2.getText().toString());
-		editnum5.setText(editnum4.getText().toString() + "-");
-		editnum2.setText("");
-
+		num1=Double.parseDouble(editnum1.getText() +"");
+		editnum5.setText(editnum1.getText().toString() + "" + "-");
+		minus=true;
+		editnum1.setText(null);
 	}
 
 	public void multi(View v) {
-
-		editnum3.setText("*");
-		editnum2.setText(editnum1.getText());
-		editnum1.setText("");
-		editnum4.setText(editnum2.getText().toString());
-		editnum5.setText(editnum4.getText().toString() + "*");
-		editnum2.setText("");
-
+		num1=Double.parseDouble(editnum1.getText() +"");
+		editnum5.setText(editnum1.getText().toString() + "" + "*");
+		mul=true;
+		editnum1.setText(null);
 	}
 
 	public void divide(View v) {
-
-		editnum3.setText("/");
-		editnum2.setText(editnum1.getText());
-		editnum1.setText("");
-		editnum4.setText(editnum2.getText().toString());
-		editnum5.setText(editnum4.getText().toString() + "/");
-		editnum2.setText("");
-
-	}
+		num1=Double.parseDouble(editnum1.getText() +"");
+		editnum5.setText(editnum1.getText().toString() + "" + "/");
+		div=true;
+		editnum1.setText(null);	}
 
 	public void equals(View v) {
-
-		num2 = Float.parseFloat(editnum2.getText().toString());
-		num4 = Float.parseFloat(editnum4.getText().toString());
-		operation = editnum3.getText().toString();
+		
+		num2 = Double.parseDouble(editnum1.getText() +"");
+		num3 = Double.parseDouble(editnum1.getText() +"");
 		editnum5.setText("");
-		if (operation.equals("+")) {
-			ans = (num4 + num2);
-			editnum1.setText(ans.toString());
-			editnum2.setText(ans.toString());
-			editnum4.setText("");
-			
-		} else if (operation.equals("-")) {
-			ans = (num4 - num2);
-			editnum1.setText(ans.toString());
-			editnum2.setText(ans.toString());
-			editnum4.setText("");
-		} else if (operation.equals("*")) {
-			ans = (num4 * num2);
-			editnum1.setText(ans.toString());
-			editnum2.setText(ans.toString());
-			editnum4.setText("");
-		} else if (operation.equals("/")) {
-			ans = (num4 / num2);
-			editnum1.setText(ans.toString());
-			editnum2.setText(ans.toString());
-			editnum4.setText("");
+		
+		if (add==true) {
+		editnum1.setText(num1 + num2+ num3 +"");
+		add=false;
+		
+		} else if (minus==true) {
+			editnum1.setText(num1 - num2 +"");
+			minus=false;
+		} else if (mul==true) {
+			editnum1.setText(num1 * num2 +"");
+			mul=false; 
+		} else if (div==true) {
+			editnum1.setText(num1 / num2 +"");
+			div=false;
 		}
 	}
-
+	public boolean onCreateOptionsMenu(Menu menu){
+		getMenuInflater().inflate(R.menu.main, menu);
+		return true;
+	}
+	
+	public boolean onOptionsItemSelected(MenuItem item){
+		int id=item.getItemId();
+		if(id==R.id.action_settings){
+			return super.onOptionsItemSelected(item);
+		}
+		return false;
 }
+}
+

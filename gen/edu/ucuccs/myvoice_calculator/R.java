@@ -32,7 +32,7 @@ public final class R {
         public static final int selector=0x7f020008;
     }
     public static final class id {
-        public static final int action_settings=0x7f08001a;
+        public static final int action_settings=0x7f080017;
         public static final int btn0=0x7f08000c;
         public static final int btn00=0x7f08000d;
         public static final int btn1=0x7f080007;
@@ -55,10 +55,7 @@ public final class R {
         public static final int btnplus=0x7f08000e;
         public static final int btnpn=0x7f080006;
         public static final int editnum1=0x7f080014;
-        public static final int editnum2=0x7f080017;
-        public static final int editnum3=0x7f080016;
-        public static final int editnum4=0x7f080018;
-        public static final int editnum5=0x7f080019;
+        public static final int editnum5=0x7f080016;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
